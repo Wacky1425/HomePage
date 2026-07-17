@@ -1,19 +1,18 @@
 @charset "UTF-8";
-/* すべての要素に適用 */
 * {
-box-sizing: border-box;
+    box-sizing: border-box;
 }
-/* ボディの設定 */
+
 body {
-font-family: "Yu Mincho",serif;
-position: relative;
-margin: 0;
-background: white;
-display: grid;
-grid-template-columns:
-[left] 100px [main] 1fr [end] 100px [right];
-grid-template-rows:
-[header] auto [main] auto [aside] auto [footer] auto [bottom];
+    font-family: "Yu Mincho",serif;
+    position: relative;
+    margin: 0;
+    background: white;
+    display: grid;
+    grid-template-columns:
+    [left] 100px [main] 1fr [end] 100px [right];
+    grid-template-rows:
+    [header] auto [main] auto [aside] auto [footer] auto [bottom];
 }
 
 header{
@@ -34,24 +33,17 @@ header img{
     flex-direction:column;
     justify-content:flex-start;
     align-items:center;
-
     position:absolute;
     bottom:0;
     left:50%;
     transform:translate(-50%,50px);
-
     width:500px;
     height:500px;
-
     padding-top:110px;
     box-sizing:border-box;
-
     background:rgba(255,255,255,.45);
-
     text-align:center;
-
     border-top:5px solid #6bb6ff;
-
     text-shadow:2px 2px 4px rgba(0,0,0,.15);
 }
 
@@ -67,7 +59,7 @@ header img{
     white-space:nowrap;
 }
 
-
+/* 上のメニューバー */
 nav{
     z-index: 101;
     position:fixed;
@@ -100,6 +92,7 @@ nav a {
     background: #eeeeee00;
     overflow:hidden;
 }
+
 nav a:before {
     position: absolute;
     top: 0;
@@ -114,11 +107,11 @@ nav a:before {
     background: #6bb6ff;
     opacity: 0.2;
 }
+
 nav a:hover:before {
     -webkit-transform: translateX(-9%) translateY(-25%) rotate(45deg);
     transform: translateX(-9%) translateY(-25%) rotate(45deg);
 }
-
 
 nav li{
     text-align:center;
@@ -126,18 +119,6 @@ nav li{
     cursor: pointer;
     transition: all 1s;
 }
-/* 
-
-nav li:hover {
-    background: white;
-}
-
-nav a{
-    display:block;
-    text-decoration: none;
-    padding: 10px 0;
-    width: 200px;
-} */
 
 nav.open {
 display: block;
@@ -168,13 +149,14 @@ padding: 20px;
     height:100vh;
 
 } */
+
+/* メイン部分 */
  main{
     position:relative;
     grid-column:left/right;
     grid-row:main/aside;
     margin:0 0 20px 0;
     padding:0;
-    /* min-height: 100vh; */
     background-image: url("../images/okumono_umi256.png");
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -191,42 +173,28 @@ padding: 20px;
     padding:0;
 }
 
-/* main h2{
-    text-align:center;
-    font-size: 50px;
-    margin: 0;
-    padding: 0;
-} */
-
 .profile {
     grid-column: main/end;
     grid-row: main/aside;
-
     display: flex;
     align-items: center;
     gap: 50px;
-
     width: 80%;
     max-width: 1200px;
     margin: 0 70px 70px 160px;
     padding: 45px;
-
     box-sizing: border-box;
-
     background: rgba(255, 255, 255, 0.6);
     border-radius: 20px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-
     color: black;
 }
 
 .profile-image {
     width: 280px;
     height: 380px;
-
     object-fit: cover;
     object-position: center;
-
     border-radius: 12px;
     flex-shrink: 0;
 }
@@ -244,7 +212,6 @@ padding: 20px;
 
 .profile-id {
     margin: 0 0 25px;
-
     font-size: 28px;
     letter-spacing: 2px;
 }
@@ -252,7 +219,6 @@ padding: 20px;
 .basic-info {
     display: flex;
     gap: 30px;
-
     margin-bottom: 25px;
 }
 
@@ -265,10 +231,8 @@ padding: 20px;
     display: flex;
     align-items: center;
     gap: 35px;
-
     margin: 0 0 30px;
     padding: 0;
-
     list-style: none;
 }
 
@@ -281,7 +245,6 @@ padding: 20px;
 .link img {
     width: 36px;
     height: 36px;
-
     object-fit: contain;
 }
 
@@ -296,10 +259,11 @@ padding: 20px;
 
 .shumi p {
     margin: 0;
-
     font-size: 22px;
     line-height: 1.8;
 }
+
+/* メディアクエリ */
 
 @media screen and (max-width: 900px) {
     .profile {
@@ -331,82 +295,7 @@ padding: 20px;
     }
 }
 
-/* .profile{
-    grid-column:main/end;
-    grid-row:main/aside;
-    display:flex;
-    width:100%;
-    padding: 100px;
-    font-size:30px;
-    color:black;
-}
-
-.profile img{
-    display:block;
-    height: 400px;
-}
-.profile h2{
-    text-align:left;
-    font-size: 50px;
-    margin: 0;
-    padding: 20px 20px;
-
-}
-.profile p1{
-
-    text-align:left;
-    font-size: 30px;
-    margin: 0;
-    padding: 10px 0 10px 20px;
-
-}
-.profile p2{
-
-    text-align:left;
-    font-size: 30px;
-    margin: 0;
-    padding: 10px 0 10px 20px;
-
-}
-.profile p3{
-
-    text-align:left;
-    font-size: 30px;
-    margin: 0;
-    padding: 10px 0 10px 20px;
-
-}
-.link{
-    display:flex;
-    list-style:none;
-    padding:0;
-}
-.link p{
-
-    text-align:left;
-    font-size: 20px;
-    margin: 0;
-    padding: 0 10px;
-}
-.link img{
-    margin: 0 0 0 20px;
-    size: 20px;
-}
-
-.prcome img{
-    display:flex;
-    align-items: center;
-    height:30px;
-
-}
-.shumi p{
-
-    text-align:left;
-    font-size: 20px;
-    margin: 0;
-    padding: 0 10px;
-} */
-
+/* スクロールフェードインアニメーション */
 .scroll{
     transition: opacity 0.7s, transform 0.7s;
     transform: translateY(150px);
@@ -417,11 +306,10 @@ padding: 20px;
   opacity: 1;
 }
 
-
+/* 横スクロールアニメーション */
 .loopimages {
     display: flex;
     align-items: stretch;
-
     width: 80vw;
     max-width: 1200px;
     margin: 0 auto;
@@ -430,7 +318,6 @@ padding: 20px;
 #grandparent {
     flex: 1;
     aspect-ratio: 16 / 9;
-
     margin: 0;
     overflow: hidden;
     border: none;
@@ -439,50 +326,36 @@ padding: 20px;
 
 #parent {
     display: flex;
-
     width: 400%;
     height: 100%;
     margin: 0;
-
     background-color: transparent;
 }
 
 #parent figure{
     position: relative;
-
     width:25%;
     margin:0;
-
     flex:0 0 25%;
 }
 
 #parent figure img{
     display:block;
-
     width:100%;
     height:100%;
-
     object-fit:contain;
 }
 
 #parent figcaption{
     position:absolute;
-
     left:0;
     bottom:0;
-
     width:100%;
-
     padding:12px 0;
-
     background:rgba(0,0,0,0.5);
-
     color:white;
-
     text-align:center;
-
     font-size:18px;
-
     text-shadow:0 1px 3px rgba(0,0,0,.7);
 }
 
@@ -511,45 +384,32 @@ padding: 20px;
     flex: 0 0 64px;
 }
 
-#buttonl,
-#buttonr {
+#buttonl,#buttonr {
     position: relative;
-
     width: 100%;
     height: 100%;
-
     margin: 0;
     padding: 0;
-
     background-color: white;
     border: none;
     outline: none;
-
     color: #6bb6ff;
     cursor: pointer;
-
-    transition:
-        background-color 0.3s ease-in-out,
-        color 0.3s ease-in-out;
+    transition:background-color 0.3s ease-in-out,color 0.3s ease-in-out;
 }
 
-#buttonl:hover,
-#buttonr:hover {
+#buttonl:hover,#buttonr:hover {
     background-color: #6bb6ff;
     color: white;
 }
 
-#buttonl::after,
-#buttonr::after {
+#buttonl::after,#buttonr::after {
     content: "";
     position: absolute;
-
     top: 50%;
     left: 50%;
-
     width: 14px;
     height: 14px;
-
     border-top: solid 3px currentColor;
     border-right: solid 3px currentColor;
 }
@@ -572,122 +432,40 @@ padding: 20px;
     }
 }
 
-/* #buttons button {
-    background-color: transparent; 
-    border: none; 
-    outline: none; 
-    position: relative;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin: 0 auto;
-    max-width: 200px;
-    padding: 10px 25px;
-    color: #6bb6ff;
-    transition: 0.3s ease-in-out;
-    font-weight: 600;
-}
-#buttons button:before {
-    position: absolute;
-    bottom: 0px;
-    left: 50%;
-    content: '';
-    width: 100%;
-    height: 2px;
-    background: rgba(0,0,0,.1);
-    transform: translateX(-50%);
-}
-#buttonr:after {
-    position: absolute;
-    bottom: 0px;
-    left: 0;
-    content: '';
-    width: 100%;
-    height: 2px;
-    background: #6bb6ff;
-    transform: scale(0, 1);
-    transform-origin: left top;
-    transition: transform .3s;
-}
-#buttons button:hover {
-    opacity: 0.7;
-}
-#buttons button:hover:after {
-    transform: scale(1, 1);
-}
-
-
-#buttonl:after {
-    position: absolute;
-    bottom: 0px;
-    left: 0;
-    content: '';
-    width: 100%;
-    height: 2px;
-    background: #6bb6ff;
-    transform: scale(0, 1);
-    transform-origin: right top;
-    transition: transform .3s;
-} */
-
-/* #buttons {
-display:flex;
-width:50%;
-margin:0 auto;
-justify-content:space-around;
-}
-
-
-#buttons button {
-display:block;
-padding:0.4em 1em;
-font-size:1.5em;
-} */
-
-
-/* main img{
-    position:sticky;
-    top:0;
-    width:100%;
-    height:100vh;
-    opacity: 0.2;
-} */
-
-/* main{
-    background-image: url("../images/okumono_umi256.png");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-} */
-
+/* 下のニュース部分 */
 aside {
-grid-column-start: main;
-grid-column-end: end;
-grid-row-start: aside;
-grid-row-end: footer;
+    grid-column-start: main;
+    grid-column-end: end;
+    grid-row-start: aside;
+    grid-row-end: footer;
 }
+
 .news {
-max-width: 1000px;
-border-top: dashed 1px #6bb6ff;
-border-bottom: dashed 1px #6bb6ff;
-margin: 2em auto;
-padding: 1em 20px;
-color: black;
+    max-width: 1000px;
+    border-top: dashed 1px #6bb6ff;
+    border-bottom: dashed 1px #6bb6ff;
+    margin: 2em auto;
+    padding: 1em 20px;
+    color: black;
 }
+
 .news .topic {
-display: flex;
-align-items: center;
-padding: 10px;
-margin: 1em 0;
-border-left: solid 10px #6bb6ff;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin: 1em 0;
+    border-left: solid 10px #6bb6ff;
 }
+
 .news .time {
-margin-right: 1em;
+    margin-right: 1em;
 }
+
 @media (max-width: 450px) {
-.news .topic {
-flex-direction: column;
-align-items: flex-start;
-}
+    .news .topic {
+    flex-direction: column;
+    align-items: flex-start;
+    }
 }
 
 footer{
@@ -739,16 +517,8 @@ body.fadeout {
   pointer-events: auto;
 } */
 
-/* .fade-in {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
-}
+/* ページ自体のフェードイン処理 */
 
-body.loaded .fade-in {
-  opacity: 1;
-  transform: translateY(0);
-} */
 .fade-in {
     background-color:white;
     z-index: 99;
@@ -759,14 +529,12 @@ body.loaded .fade-in {
     opacity: 1;
     margin:0;
     padding: 0;
-    /* transform: translateY(20px); */
     transition: opacity 1.5s ease, transform 1.5s ease;
     } 
 
 body.loaded .fade-in {
     opacity: 0;
     transform: translateY(0);
-    
     } 
 
 

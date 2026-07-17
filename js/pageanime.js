@@ -1,4 +1,3 @@
-
 // 
 // window.addEventListener("DOMContentLoaded", function(){ 
 //   //画面遷移用カーテンを消す 

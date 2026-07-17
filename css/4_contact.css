@@ -1,9 +1,8 @@
 @charset "UTF-8";
-/* すべての要素に適用 */
 * {
     box-sizing: border-box;
 }
-/* ボディの設定 */
+
 body {
     font-family: "Yu Mincho",serif;
     position: relative;
@@ -46,6 +45,7 @@ header img{
     text-shadow:2px 2px 4px rgba(0,0,0,.15);
 }
 
+/* メニューバー */
 nav{
     z-index: 101;
     position:fixed;
@@ -78,6 +78,7 @@ nav a {
     background: #eeeeee00;
     overflow:hidden;
 }
+
 nav a:before {
     position: absolute;
     top: 0;
@@ -92,11 +93,11 @@ nav a:before {
     background: #6bb6ff;
     opacity: 0.2;
 }
+
 nav a:hover:before {
     -webkit-transform: translateX(-9%) translateY(-25%) rotate(45deg);
     transform: translateX(-9%) translateY(-25%) rotate(45deg);
 }
-
 
 nav li{
     text-align:center;
@@ -127,7 +128,7 @@ nav.open {
     }
 } */
 
-
+/* メイン部分 */
 main{
     position:relative;
     grid-column:left/right;
@@ -152,15 +153,7 @@ main{
     padding:0;
 }
 
-
-/* main p{
-    display:block;
-    color: black;
-    font-size: large;
-} */
-
-
-
+/* 問い合わせフォーム */
 form input{
     font-family: "Yu Mincho",serif;
     padding:5px;
@@ -177,19 +170,22 @@ form textarea{
     font-size: 20px;
 }
 
-
 .form1{
     padding:20px 0 5px 50px;
 }
+
 .form2{
     padding:0 0 0 50px;
 }
+
 .form3{
     padding:0 0 20px 50px;
 }
+
 .form4{
     padding:0 0 20px 5px;
 }
+
 .bottom1{
     display:flex;
 }
@@ -198,15 +194,18 @@ main h2{
     margin:0;
     padding: 20px 0 10px 50px;
 }
+
 main h3{
     margin:0;
     padding: 5px 0 5px 50px;
 }
+
 main p{
     margin:0;
     padding: 5px 0 5px 60px;
 }
 
+/* フッター */
 footer{
     grid-column-start:left;
     grid-column-end:right;
@@ -216,6 +215,7 @@ footer{
     padding: 5px 0;
 }
 
+/* ページ自体のフェードイン */
 .fade-in {
     background-color:white;
     z-index: 99;
@@ -226,7 +226,6 @@ footer{
     opacity: 1;
     margin:0;
     padding: 0;
-    /* transform: translateY(20px); */
     transition: opacity 1.5s ease, transform 1.5s ease;
     } 
 
