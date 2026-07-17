@@ -1,0 +1,237 @@
+@charset "UTF-8";
+/* すべての要素に適用 */
+* {
+    box-sizing: border-box;
+}
+/* ボディの設定 */
+body {
+    font-family: "Yu Mincho",serif;
+    position: relative;
+    margin: 0;
+    background: white;
+    display: grid;
+    grid-template-columns:
+    [left] 20px [main] 1fr [end] 20px [right];
+    grid-template-rows:
+    [header] auto [main] auto [aside] auto [footer] auto [bottom];
+}
+
+header{
+    position:relative;
+    grid-column:left/right;
+    grid-row:header/main;
+    margin-bottom:0;
+}
+
+header img{
+    display:block;
+    width:100%;
+    max-height:300px;
+}
+
+
+.top-title{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:absolute;
+    bottom:0;
+    left:50%;
+    transform: translate(-50%,50px);
+    width: 100vw;
+    height: 400px;
+    background: rgba(255,255,255,.5);
+    background-size: cover;
+    font-size: 50px;
+    text-shadow:2px 2px 4px rgba(0,0,0,.15);
+}
+
+nav{
+    z-index: 101;
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+}
+
+nav ul{
+    display:flex;
+    background: rgba(255,255,255,.7);
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    font-size: 1.2rem;
+}
+
+nav a {
+    text-decoration: none;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 240px;
+    padding: 10px 25px;
+    color: #313131;
+    transition: 0.3s ease-in-out;
+    font-weight: 600;
+    background: #eeeeee00;
+    overflow:hidden;
+}
+nav a:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150%;
+    height: 500%;
+    content: "";
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    -webkit-transform: translateX(-120%) translateY(-25%) rotate(45deg);
+    transform: translateX(-120%) translateY(-25%) rotate(45deg);
+    background: #6bb6ff;
+    opacity: 0.2;
+}
+nav a:hover:before {
+    -webkit-transform: translateX(-9%) translateY(-25%) rotate(45deg);
+    transform: translateX(-9%) translateY(-25%) rotate(45deg);
+}
+
+
+nav li{
+    text-align:center;
+    width: 200px;
+    cursor: pointer;
+    transition: all 1s;
+}
+
+nav.open {
+    display: block;
+}
+
+/* メディアクエリ */
+/* @media (max-width:840px) {
+    nav {
+        position: fixed;
+        display: none;
+    }
+    nav ul {
+        flex-direction: column;
+        height: 100vh;
+        padding-top: 40px;
+        background: rgba(255,255,255,.9);
+    }
+    nav li {
+        width: 100%;
+        padding: 20px;
+    }
+} */
+
+
+main{
+    position:relative;
+    grid-column:left/right;
+    grid-row:main/aside;
+    margin:0;
+    padding:0;
+    /* min-height: 100vh; */
+    background-image: url("../images/okumono_umi256.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: auto;
+    background-position: center;
+    
+}
+
+.toumei{
+    grid-column:left/right;
+    grid-row:main/aside;
+    top:0;
+    background-color: rgba(255, 255, 255, 0.75);
+    margin:0;
+    padding:0;
+}
+
+
+/* main p{
+    display:block;
+    color: black;
+    font-size: large;
+} */
+
+
+
+form input{
+    font-family: "Yu Mincho",serif;
+    padding:5px;
+    height: 40px;
+    font-size: 20px;
+}
+
+form textarea{
+    font-family: "Yu Mincho",serif;
+    z-index: 100;
+    padding:5px;
+    width: 600px;
+    height: 300px;
+    font-size: 20px;
+}
+
+
+.form1{
+    padding:20px 0 5px 50px;
+}
+.form2{
+    padding:0 0 0 50px;
+}
+.form3{
+    padding:0 0 20px 50px;
+}
+.form4{
+    padding:0 0 20px 5px;
+}
+.bottom1{
+    display:flex;
+}
+
+main h2{
+    margin:0;
+    padding: 20px 0 10px 50px;
+}
+main h3{
+    margin:0;
+    padding: 5px 0 5px 50px;
+}
+main p{
+    margin:0;
+    padding: 5px 0 5px 60px;
+}
+
+footer{
+    grid-column-start:left;
+    grid-column-end:right;
+    grid-row-start:footer;
+    grid-row-end:bottom;
+    text-align:center;
+    padding: 5px 0;
+}
+
+.fade-in {
+    background-color:white;
+    z-index: 99;
+    grid-column:left/right;
+    grid-row:header/aside;
+    top:0;
+    left:0;
+    opacity: 1;
+    margin:0;
+    padding: 0;
+    /* transform: translateY(20px); */
+    transition: opacity 1.5s ease, transform 1.5s ease;
+    } 
+
+body.loaded .fade-in {
+    opacity: 0;
+    transform: translateY(0);
+    
+    } 

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang=”ja”>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../css/1_top.css">
+    
+    <title>自己紹介ホームページ</title>
+</head>
+<body>
+<div class="fade-in"></div>
+    <!-- <div id="curtain" class="close"></div> -->
+ <!-- <body> -->
+        <header>
+            <img src="../images/aozora-1280x720.jpg" alt="トップイメージ">
+            <div class="top-title">
+                <div class="jp">自己紹介</div>
+                <div class="en">HOME PAGE</div>
+            </div>
+        </header>
+
+        <main>
+            <div class="toumei">
+                <div class="scroll">
+                    <div class="profile">
+                        <img class="profile-image"
+                            src="../images/1000004793.jpg"
+                            alt="プロフィール画像">
+
+                        <div class="prcome">
+                            <h2>脇田 北斗</h2>
+
+                            <p class="profile-id">hokutowakita</p>
+
+                            <div class="basic-info">
+                                <p>26歳</p>
+                                <p>兵庫県出身</p>
+                            </div>
+
+                            <ul class="link">
+                                <li>
+                                    <img src="../images/2227.png" alt="Instagramロゴ">
+                                    <p>wacky1425</p>
+                                </li>
+
+                                <li>
+                                    <img src="../images/icons8-github-500.png" alt="GitHubロゴ">
+                                    <p>Wacky1425</p>
+                                </li>
+                            </ul>
+
+                            <div class="shumi">
+                                <p>
+                                    趣味はカメラ、バイク、旅行、ゲームなど。<br>
+                                    体を動かすのが好きで、
+                                    小中高では野球部に所属し、大学ではカーリングをしていました。
+                                    好きなパスタはボロネーゼ。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="scroll">
+                    <div class="loopimages">
+                        <div class="buttons">
+                            <button id="buttonl" onclick="modoru()" aria-label="前の画像"></button>
+                        </div>
+
+                        <div id="grandparent">
+                            <div id="parent">
+
+                                <figure>
+                                    <img src="../images/IMG_2320.JPG" alt="野球">
+                                    <figcaption>小中高はずっと野球部</figcaption>
+                                </figure>
+
+                                <figure>
+                                    <img src="../images/236AC665-D93E-49AB-BD7E-66FB0B5388C1.jpg" alt="カーリング">
+                                    <figcaption>大学ではカーリングを</figcaption>
+                                </figure>
+
+                                <figure>
+                                    <img src="../images/LPBA0398.JPG" alt="サイクリング">
+                                    <figcaption>広島・しまなみ海道サイクリング</figcaption>
+                                </figure>
+
+                                <figure>
+                                    <img src="../images/IMG_5907.jpg" alt="秩父ガ浜の写真">
+                                    <figcaption>香川・秩父ヶ浜</figcaption>
+                                </figure>
+
+                                <figure>
+                                    <img src="../images/IMG_6183.jpg" alt="オーストラリア">
+                                    <figcaption>オーストラリア・オペラハウス</figcaption>
+                                </figure>
+
+                                <figure>
+                                    <img src="../images/20220401160856_IMG_2220.jpg" alt="犬">
+                                    <figcaption>愛犬マロン</figcaption>
+                                </figure>
+
+                            </div>
+                        </div>
+
+                        <div class="buttons">
+                            <button id="buttonr" onclick="susumu()" aria-label="次の画像"></button>
+                        </div>
+                    </div>
+                    <!-- <div class="loopimages">
+                        <div id = "buttons">
+                        <button id="buttonl" onclick = "modoru()"> &nbsp; </button>
+                        </div>
+                        
+                        <div id = "images">
+                            <img src = "../images/imagesdog.jpg">
+                            <img src = "../images/054a.png">
+                            <img src = "../images/D90CpGcUEAEQbUM.jpg">
+                        </div>
+
+                        
+                        
+                        <div id = "buttons">
+                            <button id="buttonr" onclick = "susumu()"> &nbsp; </button>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+            <!-- <div class="backpng">
+                <img src="images/okumono_umi256.png" alt="背景画像" width="100%">
+            </div> -->
+        </main>
+
+        <aside>
+            <div class="scroll">
+                <h2>News</h2>
+                <div class="news">
+                    <div class="topic">
+                        <div class="time">2026/07/12</div>
+                        <div>初めてのスカイツリー登頂！～ちいかわコラボを添えて～</div>
+                    </div>
+                    <div class="topic">
+                        <div class="time">2026/07/01</div>
+                        <div>社会人生活START 新しい環境に</div>
+                    </div>
+                    <div class="topic">
+                        <div class="time">2026/06/20</div>
+                        <div>東京へ引っ越し 551の豚まんがないとき...</div>
+                    </div>
+                    <div class="topic">
+                        <div class="time">2026/03/17</div>
+                        <div>オーストラリア旅行 オペラハウスなど</div>
+                    </div>
+                    <div class="topic">
+                        <div class="time">2026/01/01</div>
+                        <div>新年あけましておめでとうございます！ 今年の抱負は...</div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <footer>
+            <p>&copy; 2026 自己紹介ホームページ</p>
+        </footer>
+
+        <!-- <div class="fade-in">
+            <img src ="../images/1000004793.jpg" alt="トップ自分の画像">
+        </div> -->
+    <!-- </div> -->
+    <nav>
+            <ul>
+                <li>
+                    <a href="1_top.html">TOP</a>
+                </li>
+                <li>
+                    <a href="2_experience.html">EXPERIENCE</a>
+                </li>
+                <li>
+                    <a href="3_ambition.html">AMBITION</a>
+                </li>
+                <li>
+                    <a href="4_contact.html">CONTACT</a>
+                </li>
+            </ul>
+
+
+        </nav>
+    <!-- <button onclick="toggleFade()">トグル</button>
+    <div class="fade-box" id="box">フェード要素</div> -->
+    <script type="text/javascript" src="../js/imageloop.js"></script>
+    <script type="text/javascript" src="../js/scrollloop.js"></script>
+    <script type="text/javascript" src="../js/pageanime.js"></script>
+    <script type="text/javascript" src="../js/scroll_fadein.js"></script>
+</body>
+</html>
