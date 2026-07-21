@@ -41,7 +41,7 @@ header img{
     height: 400px;
     background: rgba(255,255,255,.5);
     background-size: cover;
-    font-size: 50px;
+    font-size: 52px;
     text-shadow:2px 2px 4px rgba(0,0,0,.15);
 }
 
@@ -153,6 +153,12 @@ main{
     padding:0;
 }
 
+/* フォーム全体のブロック */
+.formpage{
+    display: flex;
+    margin: 0 120px 0 120px;
+}
+
 /* 問い合わせフォーム */
 form input{
     font-family: "Yu Mincho",serif;
@@ -197,12 +203,16 @@ main h2{
 
 main h3{
     margin:0;
-    padding: 5px 0 5px 50px;
+    padding: 5px 10px 5px 60px;
 }
 
 main p{
     margin:0;
-    padding: 5px 0 5px 60px;
+    padding: 5px 10px 5px 70px;
+}
+
+iframe{
+    margin: 20px 120px 0 175px;
 }
 
 /* フッター */
@@ -226,7 +236,7 @@ footer{
     opacity: 1;
     margin:0;
     padding: 0;
-    transition: opacity 1.5s ease, transform 1.5s ease;
+    transition: opacity 1.0s ease, transform 1.0s ease;
     } 
 
 body.loaded .fade-in {

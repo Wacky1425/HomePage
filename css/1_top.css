@@ -28,13 +28,104 @@ header img{
     max-height:100vh;
 }
 
+.fuwafuwa1 {
+    position: absolute;
+    top: 300px;
+    animation: fuwafuwa1 3.3s ease-in-out infinite alternate;
+    background: url(../images/kumo1.png) no-repeat center center / 500px auto;
+    display: inline-block;
+    transition: 1.5s ease-in-out;
+    width: 500px;
+    height: 500px;
+    margin-top: 15px;
+}
+
+.fuwafuwa1::before{
+    content: 'ようこそ！';
+    width: 100%;
+    height: 100%;
+    background: rgba(10, 157, 255, 0);
+    color: rgba(0, 0, 0, 1);
+    position: absolute;
+    left:50%;
+    top: 46%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.fuwafuwa1:hover::before {
+  opacity: 1;
+}
+
+.fuwafuwa2 {
+    position: absolute;
+    top: 300px;
+    right:100px;
+    animation: fuwafuwa2 3s ease-in-out infinite alternate;
+    background: url(../images/kumo1.png) no-repeat center center / 500px auto;
+    display: inline-block;
+    transition: 1.5s ease-in-out;
+    width: 500px;
+    height: 500px;
+    margin-top: 15px;
+}
+
+.fuwafuwa2::before{
+    content: 'ゆっくりしていってね！';
+    width: 100%;
+    height: 100%;
+    background: rgba(10, 157, 255, 0);
+    color: rgba(0, 0, 0, 1);
+    position: absolute;
+    left:50%;
+    top: 46%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.fuwafuwa2:hover::before {
+  opacity: 1;
+}
+ 
+@keyframes fuwafuwa1 {
+  0% {
+    transform:translate(0, 0) rotate(-1deg);
+  }
+  50% {
+    transform:translate(0, 25px) rotate(0deg);
+  }
+  100% {
+    transform:translate(0, 0) rotate(1deg);
+  }
+}
+
+@keyframes fuwafuwa2 {
+  0% {
+    transform:translate(0, 0) rotate(-1deg);
+  }
+  50% {
+    transform:translate(0, -30px) rotate(0deg);
+  }
+  100% {
+    transform:translate(0, 0) rotate(1deg);
+  }
+}
+
 .top-title{
     display:flex;
     flex-direction:column;
     justify-content:flex-start;
     align-items:center;
     position:absolute;
-    bottom:0;
+    bottom:25%;
     left:50%;
     transform:translate(-50%,50px);
     width:500px;
@@ -179,9 +270,9 @@ padding: 20px;
     display: flex;
     align-items: center;
     gap: 50px;
-    width: 80%;
+    width: auto;
     max-width: 1200px;
-    margin: 0 70px 70px 160px;
+    margin: 0 160px 70px 160px;
     padding: 45px;
     box-sizing: border-box;
     background: rgba(255, 255, 255, 0.6);
