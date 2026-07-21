@@ -192,7 +192,7 @@ main{
 
 .timeline-content p {
     margin:0 10px 20px 0;
-    font-size: 25px;
+    font-size: 23px;
 }
 
 .timeline-content:before {
@@ -215,7 +215,7 @@ main{
 .timeline-heading h3 {
     margin: 30px 10px 0px 0;
     padding: 0 0 30px 0;
-    font-size: 30px;
+    font-size: 28px;
 }
 
 .timeline-logo {
@@ -242,7 +242,7 @@ main{
     padding: 10px 50px 10px 50px;
     margin-top:0;
     margin-bottom:20px;
-    font-size: 30px;
+    font-size: 28px;
 }
 
 .toumei p2{
@@ -251,7 +251,7 @@ main{
     padding: 0px 50px 10px 50px;
     line-height:1.8;
     margin: 0;
-    font-size: 25px;
+    font-size: 23px;
 }
 
 /* フッター部分 */
